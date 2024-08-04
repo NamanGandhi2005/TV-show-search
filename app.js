@@ -22,8 +22,11 @@ const makeimages=(shows)=>{
         
     }
 }
-clear.addEventListener('click',function(){
-    while(document.body.img){
-        document.body.removeChild(document.body.img);
-    }
-})
+const clearImages = () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => img.remove()); 
+}
+
+clear.addEventListener('click', function () {
+    clearImages(); 
+});
